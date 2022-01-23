@@ -1,0 +1,105 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <h2>Restaurant Record App</h2>
+        <div class="d-flex">
+            <div class="text-box">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Add Restaurant
+                  </button>
+                  
+            </div>
+            
+        </div>
+    </div>
+  </nav>
+
+<!-- Jumbotro -->
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5"></div>
+    <div class="jumbotron">
+        <h1 class="display-5 fw-bold">Restaurent Record Management</h1>
+        <p class="col-md-8 fs-4">You can save records using Angular 12,here</p>
+        <a class="btn btn-primary btn-lg" target="_blank" type="button" href="https://www.youtube.com/watch?v=K302tpYOfgw" role="button">TastyCodeiz</a>
+        
+    </div>
+</div>
+<!-- Table Starts From Here -->
+<table class='table mt-4'>
+    <thead>
+        <tr >
+            <th scope='col'>Restaurant ID</th>
+            <th scope='col'>Name</th>
+            <th scope='col'>Email</th>
+            <th scope='col'>Mobile</th>
+            <th scope='col'>Address</th>
+            <th scope='col'>Service</th>
+            <th scope='col'>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Aniket</td>
+            <td>aniketjohi@gmail.com</td>
+            <td>7841953759</td>
+            <td>000</td>
+            <td>Chai & Coffee</td>
+            <td>
+                <button class="btn btn-info">Edit</button>&nbsp;
+                
+                <button class="btn btn-danger">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+<!-- Modal -->
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+ <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Please Provide Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Form Tag -->
+          <form [formGroup]="formValue">
+            <div class="mb-3">
+              <label  class="form-label">Name</label>
+              <input type="text" formControlName="name" placeholder="Enter your Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+             
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Email id</label>
+              <input type="text" class="form-control" formControlName="email" id="exampleInputPassword1" placeholder="Restaurant Email here">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mobile</label>
+                <input type="number" placeholder="Mobile number here" formControlName="mobile" class="form-control" id="exampleInputPassword1">
+              </div>
+              
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Address</label>
+                <input type="text" placeholder="Please Enter Your Address " formControlName="address" class="form-control" id="exampleInputPassword1"/>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Services</label>
+                <input type="text" class="form-control" formControlName="services" id="exampleInputPassword1">
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
